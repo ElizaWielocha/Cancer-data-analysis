@@ -1,0 +1,8 @@
+1)
+cat *.tsv > merged.tsv
+
+2)
+sort merged.tsv | uniq -d > duplicates.txt
+
+3)
+grep -Fx -f duplicates.txt *.tsv > check.txt
